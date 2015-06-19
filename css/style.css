@@ -1,0 +1,169 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "CalibriL";
+  src: url("../fonts/CalibriL.ttf");
+}
+@font-face {
+  font-family: "Calibri-Bold";
+  src: url("../fonts/calibrib.ttf");
+}
+body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.text {
+  display: inline-block;
+  position: relative;
+  width: 766px;
+  font-size: 60px;
+  line-height: 70px;
+  color: #fff;
+  text-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  padding: 40px 45px;
+  border: 2px solid #395988;
+}
+.text p:nth-child(2) {
+  font-family: "Calibri-Bold";
+}
+.text p:nth-child(3) {
+  font-family: "CalibriL";
+  font-size: 33px;
+}
+@media screen and (max-width: 768px) {
+  .text {
+    width: 90%;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .text p:nth-child(3) {
+    font-family: "CalibriL";
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 550px) {
+  .text {
+    background: none;
+    border: 2px solid #395988;
+    padding: 20px 10px;
+  }
+  .text p:nth-child(2) {
+    padding-top: 20px;
+  }
+  .text p:nth-child(3) {
+    font-family: "CalibriL";
+    padding-top: 20px;
+  }
+}
+
+.header {
+  display: table;
+  min-width: 100%;
+  height: 100vh;
+  background: url(../img/header2.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.wrap {
+  text-align: center;
+  display: table-cell;
+  min-height: 100%;
+  margin: 0 auto;
+  width: 800px;
+  vertical-align: middle;
+}
+
+.block {
+  min-height: 100vh;
+  background: grey;
+  background-size: cover;
+}
+
+.header-button a {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 0 30px;
+  background: #63a1ff;
+  color: #fff;
+  font: 18px/37px "Myriad Pro";
+}
+
+.wrap2 {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+#menu button {
+  background: #63a1ff;
+}
+#menu span {
+  background: #fff;
+}
+
+#myNavbar {
+  float: right;
+}
