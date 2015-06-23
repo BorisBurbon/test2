@@ -28,10 +28,11 @@
                 <div class="header-button">
                     <a href="#">получить консультацию</a>
                 </div>
-                <a href="" class="scroll"><img src="img/scroll.png" alt=""/></a>
+                <a href="#menu" class="scroll"><img src="img/scroll.png" alt=""/></a>
             </div>
         </div>
         <div class="container-fluid">
+            <a id="menu"></a>
             <div class="row">
                 <div class="menu-shadow">
                     <div class="menu-block">
@@ -112,5 +113,18 @@ $('.handle').on('click', function(){
             }
         });
     });
+
+    //Якорь
+
+$(document).ready(function(){
+    $('.scroll').bind("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 1200);
+        e.preventDefault();
+    });
+    return false;
+});
 </script>
 </html>

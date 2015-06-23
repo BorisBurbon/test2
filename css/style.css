@@ -116,6 +116,24 @@ body {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .text {
+    padding: 5px;
+  }
+  .text p:nth-child(1) {
+    display: none;
+  }
+  .text p:nth-child(2) {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .text p:nth-child(3) {
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 10px;
+  }
+}
+
 .header {
   display: table;
   min-width: 100%;
@@ -123,7 +141,7 @@ body {
   background: url(../img/header2.jpg) center no-repeat;
   background-size: cover;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .wrap {
@@ -151,6 +169,20 @@ body {
   bottom: 37px;
   left: 50%;
   margin-left: -20px;
+  z-index: 999;
+}
+.scroll img {
+  cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+  .scroll {
+    bottom: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .scroll {
+    display: none;
+  }
 }
 
 .menu-shadow {
