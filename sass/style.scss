@@ -10,6 +10,7 @@
 $col-white:#fff;
 $col-blue1:#395988;
 $col-blue2:#63a1ff;
+$color-text:#333;
 
 @font-face {
   font-family: "CalibriL";
@@ -43,6 +44,7 @@ body {
     font-size: 33px;
   }
 
+
   @include max-screen(768px){
     width: 90%;
     font-size: 40px;
@@ -67,9 +69,7 @@ body {
     }
   }
 }
-.border-head1{
 
-}
 .header {
   display: table;
   min-width: 100%;
@@ -88,11 +88,6 @@ body {
   vertical-align: middle;
 }
 
-.block{
-  min-height: 100vh;
-  background: grey;
-  background-size: cover;
-}
 .header-button a{
   display: inline-block;
   margin-top: 40px;
@@ -101,20 +96,128 @@ body {
   color: $col-white;
   font: 18px/37px "Myriad Pro";
 }
-.wrap2{
+.scroll{
+  padding: 0;
+  position: absolute;
+  display: inline-block;
+  bottom: 37px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.menu-shadow{
+  width: 100%;
+  height: 72px;
+  box-shadow: 0 5px 2px -2px rgba(0,0,0,0.3);
+  background: #f6f6f6;
+  bottom:-72px;
+  position: fixed;
+  z-index: 1000;
+}
+.menu-block{
   text-align: center;
   display: block;
   margin: 0 auto;
   max-width: 960px;
+  min-height: 72px;
+  background: #f6f6f6;
 }
-#menu{
-  button{
-    background: $col-blue2;
+.menu{
+  ul{
+    float: right;
+    overflow: hidden;
+    color: white;
+    transition: 0.9s;
+
+    li {
+      display: inline-block;
+      font: 18px/18px "Calibri";
+
+      a {
+        float: right;
+        display: inline-block;
+        padding: 27px 6px;
+        text-decoration: none;
+        color: $color-text;
+        transition: 0.2s;
+
+        &:hover{
+          background: $col-blue2;
+          color: $col-white;
+          transition: 0.2s;
+        }
+      }
+    }
   }
-  span{
-    background: $col-white;
-  }
+
 }
-#myNavbar{
-  float: right;
+.handle{
+  width: 100%;
+  background: $col-blue2;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font: 20px/20px "Calibri-Bold";
+  padding: 28px 20px;
+  cursor: pointer;
+  color: $color-text;
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .menu-block{
+    .navbar-brand{
+      width: 100%;
+      float: none;
+
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  nav ul{
+    margin-top: 5px;
+    width: 100%;
+    max-height:0;
+    float: none;
+    background: #f6f6f6;
+
+    & li:last-child{
+      margin-bottom: 5px;
+    }
+  }
+  .showing{
+    max-height: 22em;
+  }
+  .menu ul li {
+    width: 100%;
+    a{
+      padding: 15px;
+      width: 100%;
+      float: none;
+      border-bottom: 1px solid #bfbbbb;
+
+      &:hover{
+        font-weight: 600;
+        box-shadow: 0 5px 2px -2px rgba(0,0,0,0.3);
+      }
+    }
+  }
+  .handle{
+    display: block;
+
+
+    &:hover{
+      background:$col-blue1;
+      color: $col-white;
+    }
+  }
+
+}
+
+.q{
+  margin-top: 65px;
+  height: 2000px;
 }

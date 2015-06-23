@@ -28,38 +28,41 @@
                 <div class="header-button">
                     <a href="#">получить консультацию</a>
                 </div>
+                <a href="" class="scroll"><img src="img/scroll.png" alt=""/></a>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="wrap2">
-                    <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="img/logo.png">
-                    </a>
-                    <nav class="navbar" id="menu">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="myNavbar">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#">ABOUT US</a></li>
-                                <li><a href="#">PORTFOLIO</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Contact us</a></li>
+                <div class="menu-shadow">
+                    <div class="menu-block">
+                        <a class="navbar-brand" href="#">
+                            <img alt="Brand" src="img/logo.png">
+                        </a>
+                        <nav class="menu">
+                            <div class="handle">Меню</div>
+                            <ul>
+                                <li><a href="#">Преимущества</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Маркетинг</a></li>
+                                <li><a href="#">Цены</a></li>
+                                <li><a href="#">Контакты</a></li>
                             </ul>
-                        </div>
-                    </nav>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="block">
+            <div class="q">
+            </div>
 
         </div>
+        <div class="block">
+            <div class="q">
+            </div>
 
+        </div>
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
      <script src="js/vendor/bootstrap.min.js"></script>
@@ -67,12 +70,47 @@
     </body>
 <script>
 $(window).scroll(function() {
-    var st = $(this).scrollTop() /50;
+    var st = $(this).scrollTop() /70;
 
     $(".wrap").css({
         "transform" : "translate3d(0px, " + st  + "%, .01px)",
         "-webkit-transform" : "translate3d(0px, " + st  + "%, 01px)"
     });
 });
+
+// адоптация меню
+$('.handle').on('click', function(){
+    $('nav ul').toggleClass('showing');
+});
+
+// фиксирование меню при скроле
+    $(function () {
+        // высота "шапки", px
+        var h_hght = $('.header').outerHeight();
+        // высота блока с меню, px
+        var h_nav = $('.menu-shadow').outerHeight();
+        var top;
+        $(window).scroll(function () {
+            // отступ сверху
+            top = $(this).scrollTop();
+            if ((h_hght - top) <= h_nav) {
+                $('.menu-shadow').css('top', '0');
+            }
+            else if (top < h_hght && top > 0) {
+                $('.menu-shadow').css({
+                    'bottom': top,
+                    'top': '',
+                    'transition': '0s'
+                });
+            }
+            else if (top < h_nav) {
+                $('.menu-shadow').css({
+                    'top': '',
+                    'bottom': '-72px',
+                    'transition': '1.3s'
+                });
+            }
+        });
+    });
 </script>
 </html>
