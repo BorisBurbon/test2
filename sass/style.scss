@@ -35,7 +35,6 @@ body {
   text-shadow: 0 20px 60px rgba(0,0,0,0.6);
   padding: 40px 45px;
   border: 2px solid $col-blue1;
-
   p:nth-child(2){
     font-family: "Calibri-Bold";
   }
@@ -43,8 +42,6 @@ body {
     font-family: "CalibriL";
     font-size: 33px;
   }
-
-
   @include max-screen(768px){
     width: 90%;
     font-size: 40px;
@@ -68,7 +65,6 @@ body {
       }
     }
   }
-
   @include max-screen(450px){
       padding: 5px;
       p:nth-child(1){
@@ -86,7 +82,6 @@ body {
       }
   }
 }
-
 .header {
   display: table;
   min-width: 100%;
@@ -104,7 +99,6 @@ body {
   width: 800px;
   vertical-align: middle;
 }
-
 .header-button a{
   display: inline-block;
   margin-top: 40px;
@@ -112,6 +106,11 @@ body {
   background: $col-blue2;
   color: $col-white;
   font: 18px/37px "Myriad Pro";
+  text-decoration: none;
+
+  &:hover{
+    background: $col-blue1;
+  }
 }
 .scroll{
   padding: 0;
@@ -120,7 +119,7 @@ body {
   bottom: 37px;
   left: 50%;
   margin-left: -20px;
-  z-index: 999;
+  z-index: 9;
 
   img{
     cursor: pointer;
@@ -132,7 +131,6 @@ body {
     display: none;
   }
 }
-
 .menu-shadow{
   width: 100%;
   height: 72px;
@@ -190,6 +188,8 @@ body {
   cursor: pointer;
   color: $color-text;
   display: none;
+  border-top: 1px solid #bfbbbb;
+  border-bottom: 1px solid #bfbbbb;
 }
 
 @media screen and (max-width: 768px){
@@ -206,7 +206,6 @@ body {
   }
 
   nav ul{
-    margin-top: 5px;
     width: 100%;
     max-height:0;
     float: none;
@@ -236,16 +235,144 @@ body {
   .handle{
     display: block;
 
-
     &:hover{
       background:$col-blue1;
       color: $col-white;
     }
   }
+}
+.block1{
+  width: 100%;
+  position: relative;
+  min-height: 300px;
+  background: $col-white;
+  z-index: 10;
+
+  h1{
+    margin-top: 60px;
+    font: 35px/40px "CalibriL";
+
+    @include max-screen(768px){
+      margin-top: 140px;
+    }
+    @include max-screen(500px){
+      font: 24px/30px "CalibriL";
+    }
+  }
+
+  h2{
+    font: 50px/65px "Calibri-Bold";
+    font-weight: 900;
+
+    span{
+      color: $col-blue2;
+    }
+    @include max-screen(500px){
+      font: 30px/36px "Calibri-Bold";
+      padding: 10px 0;
+    }
+  }
+
+  h3{
+    margin-bottom: 35px;
+    font: 24px/30px "CalibriL";
+
+    span{
+      color: $col-blue2;
+    }
+    @include max-screen(500px){
+      font: 18px/24px "CalibriL";
+    }
+  }
+}
+.block1-content{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 25px;
+
+  h4{
+    font: 30px/30px "CalibriL";
+    padding: 20px 0;
+  }
+  p{
+    font: 16px/20px "CalibriL";
+  }
+}
+.block1-text{
+  display: inline-block;
+  max-width: 370px;
+  min-height: 6em;
+}
+.block2{
+  height: 655px;
+  background-size: cover;
+  position: relative;
+  background: $col-white;
+  overflow: hidden;
 
 }
+.block2-content{
+  height: 100vh;
+  background: url('../img/block2.jpg') center no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+}
+.block2-content2{
+  height: 655px;
+  position: relative;
+  background: url('../img/block2.png') center repeat;
+  z-index: 11;
+  overflow: hidden;
+}
+.block2-text{
+  text-align: left;
+  z-index: 14;
+  color: $col-white;
+  font: 18px/22px "CalibriL";
 
-.q{
-  margin-top: 65px;
-  height: 2000px;
+  h4{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font: 40px/46px "CalibriL";
+    color: $col-blue2;
+    text-shadow: 2px 2px 4px #000, 0 0 1em #000;
+  }
+
+  p{
+    margin-bottom: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+    text-shadow: 2px 2px 4px #000, 0 0 1em #000;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block3{
+  margin-top: -220px;
+  position: relative;
+  background: url("../img/line.png") center no-repeat;
+  background-size: cover;
+  height: 240px;
+  z-index: 13;
+}
+.block4{
+  height: 500px;
+  background: $col-white;
+  position: relative;
+  z-index: 12;
 }

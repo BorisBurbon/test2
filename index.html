@@ -17,7 +17,6 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <div class="header">
             <div class="wrap">
                 <div class="text">
@@ -54,77 +53,109 @@
                 </div>
             </div>
         </div>
-        <div class="block">
-            <div class="q">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 block1">
+                    <h1>Наша компания “Advertising Technologies” -<br />
+                        рада предложить Вам свои услуги по разработке
+                    </h1>
+                    <h2><span>Landing Page</span> для Вашего бизнеса</h2>
+                    <h3>Заказав Landing Page у нас, вы получите в свои руки<br />
+                        <span>уникальный инструмент для успешного ведения любой деятельности</span>
+                    </h3>
+                </div>
+                <div class="col-sm-6 col-xs-12 block1-content">
+                    <img src="img/blobk1-1.png" alt="">
+                    <h4>Уникальный дизайн</h4>
+                    <div class="block1-text">
+                        <p>Ваш бизнес должен быть узнаваемым.<br />
+                        Разработка Ландинг Пейдж - это творческий процесс.
+                        Мы разработаем уникальный дизайн полностью
+                        сочетаемый с Вашей компанией, товаром или услугой.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 block1-content">
+                    <img src="img/blobk1-2.png" alt="">
+                    <h4>       Граммотный копирайт</h4>
+                    <div class="block1-text">
+                        <p>Именно тексты рассказывают о Вашем предложении,
+                            они цепляют внимание посетителя. Наши копирайтеры
+                            напишу тексты в полном сочетании с дизайном
+                            Вашего Landing Page
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 block1-content">
+                    <img src="img/blobk1-3.png" alt="">
+                    <h4>Адаптация под<br /> различные устройства</h4>
+                    <div class="block1-text">
+                        <p>Все продающие страницы разработанные в
+                            нашей компании, полностью адаптированны под
+                            смартфоны, планшеты и компьютеры.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 block1-content">
+                    <img src="img/blobk1-4.png" alt="">
+                    <h4>       Граммотный копирайт</h4>
+                    <div class="block1-text">
+                        <p>Именно тексты рассказывают о Вашем предложении,
+                            они цепляют внимание посетителя. Наши копирайтеры
+                            напишу тексты в полном сочетании с дизайном
+                            Вашего Landing Page
+                        </p>
+                    </div>
+                </div>
             </div>
-
         </div>
-        <div class="block">
-            <div class="q">
+        <div class="container-fluid block2">
+            <div class="row">
+                <div class="block2-content">
+                    <div class="block2-content2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12 block2-text">
+                                    <h4>Сайты, которые <br />
+                                    действительно продают</h4>
+                                    <p>
+                                        Разработать реально продающий лендинг, не имея
+                                        опыта попросту невозможно. Сотрудники нашей
+                                        компании это: многолетний опыт разработок,
+                                        полученных в международных агентствах,
+                                        максимальное качество, талант воплощенные
+                                        в самых нестандартных проектах.
+                                    </p>
+                                    <p>
+                                        Наши сотрудники мастера своего дела и каждый
+                                        новый проект это вызов нашим знаниям, навыкам
+                                        и стремлению к совершенному Landing Page.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 col-xs-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-     <script src="js/vendor/bootstrap.min.js"></script>
-     <script src="js/main.js"></script>
+        <div class="container-fluid block3">
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="container-fluid block4">
+        </div>
+
+
+        <footer>
+        </footer>
+
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+         <script src="js/vendor/bootstrap.min.js"></script>
+         <script src="js/main.js"></script>
+         <script src="js/vendor/html5shiv.js"></script>
     </body>
-<script>
-$(window).scroll(function() {
-    var st = $(this).scrollTop() /70;
 
-    $(".wrap").css({
-        "transform" : "translate3d(0px, " + st  + "%, .01px)",
-        "-webkit-transform" : "translate3d(0px, " + st  + "%, 01px)"
-    });
-});
-
-// адоптация меню
-$('.handle').on('click', function(){
-    $('nav ul').toggleClass('showing');
-});
-
-// фиксирование меню при скроле
-    $(function () {
-        // высота "шапки", px
-        var h_hght = $('.header').outerHeight();
-        // высота блока с меню, px
-        var h_nav = $('.menu-shadow').outerHeight();
-        var top;
-        $(window).scroll(function () {
-            // отступ сверху
-            top = $(this).scrollTop();
-            if ((h_hght - top) <= h_nav) {
-                $('.menu-shadow').css('top', '0');
-            }
-            else if (top < h_hght && top > 0) {
-                $('.menu-shadow').css({
-                    'bottom': top,
-                    'top': '',
-                    'transition': '0s'
-                });
-            }
-            else if (top < h_nav) {
-                $('.menu-shadow').css({
-                    'top': '',
-                    'bottom': '-72px',
-                    'transition': '1.3s'
-                });
-            }
-        });
-    });
-
-    //Якорь
-
-$(document).ready(function(){
-    $('.scroll').bind("click", function(e){
-        var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
-        }, 1200);
-        e.preventDefault();
-    });
-    return false;
-});
-</script>
 </html>

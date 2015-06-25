@@ -160,6 +160,10 @@ body {
   background: #63a1ff;
   color: #fff;
   font: 18px/37px "Myriad Pro";
+  text-decoration: none;
+}
+.header-button a:hover {
+  background: #395988;
 }
 
 .scroll {
@@ -169,7 +173,7 @@ body {
   bottom: 37px;
   left: 50%;
   margin-left: -20px;
-  z-index: 999;
+  z-index: 9;
 }
 .scroll img {
   cursor: pointer;
@@ -239,6 +243,8 @@ body {
   cursor: pointer;
   color: #333;
   display: none;
+  border-top: 1px solid #bfbbbb;
+  border-bottom: 1px solid #bfbbbb;
 }
 
 @media screen and (max-width: 768px) {
@@ -252,7 +258,6 @@ body {
   }
 
   nav ul {
-    margin-top: 5px;
     width: 100%;
     max-height: 0;
     float: none;
@@ -288,7 +293,121 @@ body {
     color: #fff;
   }
 }
-.q {
-  margin-top: 65px;
-  height: 2000px;
+.block1 {
+  width: 100%;
+  position: relative;
+  min-height: 300px;
+  background: #fff;
+  z-index: 10;
+}
+.block1 h1 {
+  margin-top: 60px;
+  font: 35px/40px "CalibriL";
+}
+@media screen and (max-width: 768px) {
+  .block1 h1 {
+    margin-top: 140px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .block1 h1 {
+    font: 24px/30px "CalibriL";
+  }
+}
+.block1 h2 {
+  font: 50px/65px "Calibri-Bold";
+  font-weight: 900;
+}
+.block1 h2 span {
+  color: #63a1ff;
+}
+@media screen and (max-width: 500px) {
+  .block1 h2 {
+    font: 30px/36px "Calibri-Bold";
+    padding: 10px 0;
+  }
+}
+.block1 h3 {
+  margin-bottom: 35px;
+  font: 24px/30px "CalibriL";
+}
+.block1 h3 span {
+  color: #63a1ff;
+}
+@media screen and (max-width: 500px) {
+  .block1 h3 {
+    font: 18px/24px "CalibriL";
+  }
+}
+
+.block1-content {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.block1-content h4 {
+  font: 30px/30px "CalibriL";
+  padding: 20px 0;
+}
+.block1-content p {
+  font: 16px/20px "CalibriL";
+}
+
+.block1-text {
+  display: inline-block;
+  max-width: 370px;
+  min-height: 6em;
+}
+
+.block2-content {
+  height: 800px;
+  background: url("../img/block2.jpg") center no-repeat fixed;
+  background-size: cover;
+    -webkit-background-attachment: fixed;
+}
+
+.block2-content2 {
+  height: 655px;
+  position: relative;
+  background: url("../img/block2.png") center repeat;
+  z-index: 11;
+  overflow: hidden;
+}
+
+.block2-text {
+  text-align: left;
+  z-index: 14;
+  color: #fff;
+  font: 18px/22px "CalibriL";
+}
+.block2-text h4 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+  font: 40px/46px "CalibriL";
+  color: #63a1ff;
+  text-shadow: 2px 2px 4px #000, 0 0 1em #000;
+}
+.block2-text p {
+  margin-bottom: 25px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-shadow: 2px 2px 4px #000, 0 0 1em #000;
+}
+
+.block3 {
+  margin-top: -355px;
+  position: relative;
+  background: url("../img/line.png") center no-repeat;
+  background-size: cover;
+  height: 240px;
+  z-index: 13;
+}
+
+.block4 {
+  height: 500px;
+  background: #fff;
+  position: relative;
+  z-index: 12;
 }
