@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "CalibriL";
+    src:  url('../fonts/CalibriL.ttf');
+}
+@font-face {
+    font-family: "Calibri-Bold";
+    src:  url('../fonts/calibrib.ttf');
+}
+@font-face {
+    font-family: "Myriad-Inalic";
+    src:  url('../fonts/MyriadPro-It.otf');
+}
+
+/*Правельная загрузка шрифта с учетом всех баузеров*/
+/*
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("fonts/RobotoRegular/RobotoRegular.eot");
+    src: url("fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+    url("fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+*/

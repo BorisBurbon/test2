@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fonts.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
@@ -25,9 +26,9 @@
                     <p>для успешного ведения бизнеса
                 </div>
                 <div class="header-button">
-                    <a href="#">получить консультацию</a>
+                    <a href="#dialog" name="modal">получить консультацию</a>
                 </div>
-                <a href="#menu" class="scroll"><img src="img/scroll.png" alt=""/></a>
+                <a href="#menu" class="scroll hvr-pulse-grow"><img src="img/scroll.png" alt=""/></a>
             </div>
         </div>
         <div class="container-fluid">
@@ -131,7 +132,43 @@
                                         и стремлению к совершенному Landing Page.
                                     </p>
                                 </div>
-                                <div class="col-md-6 col-xs-12">
+                                <div class="col-md-6 col-xs-12 scills">
+                                    <div class="skillBar">
+                                        <h4>HTML5</h4>
+                                        <div class="skillBarContainer-img">
+                                            <div class="value-98 skillBarValue-img"><img src="img/scills1.png" alt=""></div>
+                                        </div>
+                                        <div class="skillBarContainer">
+                                            <div class="skillBarValue value-98"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skillBar">
+                                        <h4>CSS</h4>
+                                        <div class="skillBarContainer-img">
+                                            <div class="value-90 skillBarValue-img"><img src="img/scills2.png" alt=""></div>
+                                        </div>
+                                        <div class="skillBarContainer">
+                                            <div class="skillBarValue value-90"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skillBar">
+                                        <h4>PHP</h4>
+                                        <div class="skillBarContainer-img">
+                                            <div class="value-78 skillBarValue-img"><img src="img/scills3.png" alt=""></div>
+                                        </div>
+                                        <div class="skillBarContainer">
+                                            <div class="skillBarValue value-78"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skillBar">
+                                        <h4>Javascript</h4>
+                                        <div class="skillBarContainer-img">
+                                            <div class="value-96 skillBarValue-img"><img src="img/scills4.png" alt=""></div>
+                                        </div>
+                                        <div class="skillBarContainer">
+                                            <div class="skillBarValue value-96"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -140,16 +177,85 @@
             </div>
         </div>
         <div class="container-fluid block3">
-            <div class="row">
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-6 block3-content">
+                        <div class="block3-text">
+                            <h5>47</h5>
+                        </div>
+                        <p>Довольных<br /> клиента</p>
+                    </div>
+                    <div class="col-md-3 col-xs-6 block3-content">
+                        <div class="block3-text">
+                            <h5>7</h5>
+                        </div>
+                        <p>Лет<br /> опыта</p>
+                    </div>
+                    <div class="col-md-3 col-xs-6 block3-content">
+                        <div class="block3-text">
+                            <h5>72</h5>
+                        </div>
+                        <p>Завершенных<br /> проекта</p>
+                    </div>
+                    <div class="col-md-3 col-xs-6 block3-content">
+                        <div class="block3-text">
+                            <h5>5</h5>
+                        </div>
+                        <p>Лучших<br /> партнера</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container-fluid block4">
-        </div>
-
 
         <footer>
+            <div class="container-fluid block4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Если у Вас остались вопросы, <span>Вы можете заказать бесплатную консультацию прямо сейчас!</span>
+                            <a href="#dialog" name="modal">получить консультацию</a></p>
+                    </div>
+                </div>
+            </div>
         </footer>
+        <!--Модальное окно-->
+        <div id="boxes">
+            <div id="dialog" class="window">
+                <h4>Закажи бесплатную консультацию прямо сейчас</h4>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <form method="post">
+                        <div class="col-xs-12 modal-form-input">
+                            <div class="col-xs-4 modal-form-text">
+                                Ваше Ф.И.О.:
+                            </div>
+                            <div class="col-xs-8">
+                                <input class="form-control input-sm" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 modal-form-input">
+                            <div class="col-xs-4 modal-form-text">
+                                Номер телефона:
+                            </div>
+                            <div class="col-xs-8">
+                                <input class="form-control input-sm" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 modal-form-input">
+                            <div class="col-xs-4 modal-form-text">
+                                E-mail:
+                            </div>
+                            <div class="col-xs-8">
+                                <input class="form-control input-sm" type="email" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-form-input">
+                            <button type="submit" id="btn-modal-fotm">Получить консультацию</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="mask"></div>
+        </div>
+        <!--Модальное окно END-->
 
          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
          <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
@@ -157,5 +263,4 @@
          <script src="js/main.js"></script>
          <script src="js/vendor/html5shiv.js"></script>
     </body>
-
 </html>

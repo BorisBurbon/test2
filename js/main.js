@@ -55,3 +55,26 @@ $(document).ready(function(){
     });
     return false;
 });
+
+//Всплывающее окно
+
+$(document).ready(function() {
+    $('a[name=modal]').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+        $('#mask').fadeIn(500);
+        $('#mask').fadeTo("slow",0.3);
+        $(id).fadeIn(1000);
+    });
+    $('.window .close').click(function (e) {
+        e.preventDefault();
+        $('#mask, .window').hide();
+    });
+    $('#mask').click(function () {
+        $(this).hide();
+        $('.window').hide();
+    });
+});
