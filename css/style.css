@@ -413,6 +413,7 @@ body {
 
 .skillBar {
   margin: 46px auto 0 auto;
+    display: none;
 }
 .skillBar h4 {
   text-align: left;
@@ -574,10 +575,15 @@ body {
   }
 }
 .skillBarValue {
-  -webkit-animation: slideIn 5s;
-  -moz-animation: slideIn 5s;
-  -o-animation: slideIn 5s;
-  animation: slideIn 5s;
+  -webkit-animation: slideIn 8s;
+  -moz-animation: slideIn 8s;
+  -o-animation: slideIn 8s;
+  animation: slideIn 8s;
+
+    animation-delay:5s;
+    -webkit-animation-delay:5s;
+    -moz-animation-delay:5s;
+    -o-animation-delay:5s;
 }
 
 .skillBarValue-img {
@@ -588,10 +594,15 @@ body {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  -webkit-animation: slideIn 5s;
-  -moz-animation: slideIn 5s;
-  -o-animation: slideIn 5s;
-  animation: slideIn 5s;
+  -webkit-animation: slideIn 8s;
+  -moz-animation: slideIn 8s;
+  -o-animation: slideIn 8s;
+  animation: slideIn 8s;
+
+    animation-delay:5s;
+    -webkit-animation-delay:5s;
+    -moz-animation-delay:5s;
+    -o-animation-delay:5s;
 }
 
 .block3 {
@@ -790,3 +801,8 @@ body {
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
 }
+
+.scroollAnimated, .scroollAnimated2, .scroollAnimated3, .scroollAnimated4 {
+  visibility: hidden;
+}
+

@@ -14,7 +14,7 @@ $('.handle').on('click', function(){
     $('nav ul').toggleClass('showing');
 });
 
-// фиксирование меню при скроле
+// фиксирование меню при скроле, в него же вставил анимацию при скруле
 $(function () {
     // высота "шапки", px
     var h_hght = $('.header').outerHeight();
@@ -41,6 +41,51 @@ $(function () {
                 'transition': '1.3s'
             });
         }
+
+
+        /*    Запуск анимации при скруле вставил в общую функцию scroll чтобы меню не прыгало
+         $(window).scroll(function(){
+
+         });*/
+
+        $('.scroollAnimated').each(function(){
+            var animatedBlock = $(this).offset().top;
+            var topWindow = $(window).scrollTop()+$(window).height();
+            if (animatedBlock < topWindow-100){
+                $(this).addClass('fadeInLeft');
+            }
+        });
+        $('.scroollAnimated2').each(function(){
+            var animatedBlock = $(this).offset().top;
+            var topWindow = $(window).scrollTop()+$(window).height();
+            if (animatedBlock < topWindow-100){
+                $(this).addClass('fadeInRight');
+            }
+        });
+        $('.scroollAnimated3').each(function(){
+            var animatedBlock = $(this).offset().top;
+            var topWindow = $(window).scrollTop()+$(window).height();
+            if (animatedBlock < topWindow-200){
+                $(this).addClass('bounceInUp');
+            }
+        });
+        $('.scroollAnimated4').each(function(){
+            var animatedBlock = $(this).offset().top;
+            var topWindow = $(window).scrollTop()+$(window).height();
+            if (animatedBlock < topWindow-100){
+                $(this).addClass('rollIn');
+            }
+        });
+        // Для скилбара включаем display block только при скруле в 200 пиксилей от bottom
+        $('.skillBar').each(function(){
+            var animatedBlock = $(this).offset().top;
+            var topWindow = $(window).scrollTop()+$(window).height();// к топу прибавили высоту экрана и получили ботом
+            if (animatedBlock < topWindow-200) {
+                $(this).css({'display': 'block'});
+            }
+        });
+        //Конец анимации при скруле
+
     });
 });
 
@@ -78,3 +123,5 @@ $(document).ready(function() {
         $('.window').hide();
     });
 });
+
+
